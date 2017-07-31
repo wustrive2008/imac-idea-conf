@@ -1,0 +1,17 @@
+<templateSet group="mygroup">
+  <template name="filec" value="/**&#10; *  &#10; *  这里输入描述信息&#10; * &#10; * @name: $NAME$&#10; * @mail: wustrive2008@gmail.com&#10; * @auth: $USER$&#10; * @create $DATE$ $TIME$&#10; * &#10;**/" description="文件头注释" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="className()" defaultValue="" alwaysStopAt="true" />
+    <variable name="USER" expression="user()" defaultValue="wustrive" alwaysStopAt="true" />
+    <variable name="DATE" expression="date()" defaultValue="" alwaysStopAt="true" />
+    <variable name="TIME" expression="time()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="logc" value="private static Logger log = LoggerFactory.getLogger($className$.class);" description="实例化log" toReformat="false" toShortenFQNames="true">
+    <variable name="className" expression="className()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+</templateSet>
